@@ -1,0 +1,36 @@
+[project]
+name = "cv_proj3"
+version = "0.1.0"
+description = "Computer Vision Project 3"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "jupyter",
+    "mypy",
+    "pytest",
+    "flake8",
+    "bandit",
+    "torch",
+    "torchvision",
+    "pillow",
+    "opencv-python",
+    "colour-science",
+    "scipy",
+    "PyYAML",
+    "pandas",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vision"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
